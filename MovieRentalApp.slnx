@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="MovieRental/MovieRental.vbproj" />
+  <Project Path="MovieRentalUI/MovieRentalUI.vbproj" />
+</Solution>
