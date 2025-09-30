@@ -1,6 +1,6 @@
 ﻿Public Class Login
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-        If MessageBox.Show("Do want to exit?", "EXIT", MessageBoxButtons.YesNo) = MsgBoxResult.Yes Then
+        If MessageBox.Show("Do want to exit?", "EXIT", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = MsgBoxResult.Yes Then
             Application.Exit()
         End If
     End Sub
@@ -33,4 +33,20 @@
 
     End Sub
 
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        txtPassword.UseSystemPasswordChar = False
+
+    End Sub
+
+    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtPassword.UseSystemPasswordChar = True
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        txtPassword.UseSystemPasswordChar = True
+    End Sub
 End Class

@@ -48,21 +48,24 @@ Partial Class SignUp
         LogInLink = New LinkLabel()
         Label1 = New Label()
         chkAgreementWithPolicies = New CheckBox()
+        PictureBox1 = New PictureBox()
         Panel1.SuspendLayout()
         grpUserCredentials.SuspendLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
         ' 
         Panel1.BackColor = Color.Navy
+        Panel1.Controls.Add(PictureBox1)
         Panel1.Controls.Add(btnBack)
         Panel1.Controls.Add(Label15)
         Panel1.Controls.Add(Label16)
-        Panel1.Location = New Point(1, 1)
-        Panel1.Margin = New Padding(3, 2, 3, 2)
+        Panel1.Location = New Point(1, 2)
+        Panel1.Margin = New Padding(4, 3, 4, 3)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(441, 430)
+        Panel1.Size = New Size(630, 717)
         Panel1.TabIndex = 2
         ' 
         ' btnBack
@@ -74,10 +77,10 @@ Partial Class SignUp
         btnBack.FlatStyle = FlatStyle.Flat
         btnBack.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnBack.ForeColor = SystemColors.Control
-        btnBack.Location = New Point(0, -1)
-        btnBack.Margin = New Padding(3, 2, 3, 2)
+        btnBack.Location = New Point(0, -2)
+        btnBack.Margin = New Padding(4, 3, 4, 3)
         btnBack.Name = "btnBack"
-        btnBack.Size = New Size(53, 49)
+        btnBack.Size = New Size(76, 82)
         btnBack.TabIndex = 22
         btnBack.Text = "<"
         btnBack.UseVisualStyleBackColor = False
@@ -88,9 +91,10 @@ Partial Class SignUp
         Label15.BackColor = Color.Navy
         Label15.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label15.ForeColor = Color.White
-        Label15.Location = New Point(38, 182)
+        Label15.Location = New Point(54, 303)
+        Label15.Margin = New Padding(4, 0, 4, 0)
         Label15.Name = "Label15"
-        Label15.Size = New Size(320, 19)
+        Label15.Size = New Size(478, 30)
         Label15.TabIndex = 3
         Label15.Text = "Unlimited Entertainment,  Right to Your Screen"
         ' 
@@ -100,9 +104,10 @@ Partial Class SignUp
         Label16.BackColor = Color.Navy
         Label16.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label16.ForeColor = Color.White
-        Label16.Location = New Point(38, 141)
+        Label16.Location = New Point(54, 235)
+        Label16.Margin = New Padding(4, 0, 4, 0)
         Label16.Name = "Label16"
-        Label16.Size = New Size(311, 45)
+        Label16.Size = New Size(468, 65)
         Label16.TabIndex = 2
         Label16.Text = "Rent Movies Online"
         ' 
@@ -111,9 +116,10 @@ Partial Class SignUp
         Label14.AutoSize = True
         Label14.Font = New Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label14.ForeColor = Color.Navy
-        Label14.Location = New Point(480, 16)
+        Label14.Location = New Point(683, 57)
+        Label14.Margin = New Padding(4, 0, 4, 0)
         Label14.Name = "Label14"
-        Label14.Size = New Size(278, 37)
+        Label14.Size = New Size(406, 54)
         Label14.TabIndex = 10
         Label14.Text = "Create Your Account"
         ' 
@@ -134,20 +140,20 @@ Partial Class SignUp
         grpUserCredentials.Controls.Add(txtSurname)
         grpUserCredentials.Controls.Add(txtEmail)
         grpUserCredentials.Controls.Add(Label4)
-        grpUserCredentials.Location = New Point(532, 86)
-        grpUserCredentials.Margin = New Padding(3, 2, 3, 2)
+        grpUserCredentials.Location = New Point(760, 143)
+        grpUserCredentials.Margin = New Padding(4, 3, 4, 3)
         grpUserCredentials.Name = "grpUserCredentials"
-        grpUserCredentials.Padding = New Padding(3, 2, 3, 2)
-        grpUserCredentials.Size = New Size(186, 219)
+        grpUserCredentials.Padding = New Padding(4, 3, 4, 3)
+        grpUserCredentials.Size = New Size(266, 365)
         grpUserCredentials.TabIndex = 9
         grpUserCredentials.TabStop = False
         ' 
         ' txtFirstname
         ' 
-        txtFirstname.Location = New Point(5, 29)
-        txtFirstname.Margin = New Padding(3, 2, 3, 2)
+        txtFirstname.Location = New Point(7, 48)
+        txtFirstname.Margin = New Padding(4, 3, 4, 3)
         txtFirstname.Name = "txtFirstname"
-        txtFirstname.Size = New Size(148, 23)
+        txtFirstname.Size = New Size(210, 31)
         txtFirstname.TabIndex = 23
         ' 
         ' Label11
@@ -155,18 +161,20 @@ Partial Class SignUp
         Label11.AutoSize = True
         Label11.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label11.ForeColor = Color.Red
-        Label11.Location = New Point(153, 238)
+        Label11.Location = New Point(219, 397)
+        Label11.Margin = New Padding(4, 0, 4, 0)
         Label11.Name = "Label11"
-        Label11.Size = New Size(12, 15)
+        Label11.Size = New Size(20, 25)
         Label11.TabIndex = 32
         Label11.Text = "*"
         ' 
         ' Label13
         ' 
         Label13.AutoSize = True
-        Label13.Location = New Point(5, 92)
+        Label13.Location = New Point(7, 153)
+        Label13.Margin = New Padding(4, 0, 4, 0)
         Label13.Name = "Label13"
-        Label13.Size = New Size(36, 15)
+        Label13.Size = New Size(54, 25)
         Label13.TabIndex = 18
         Label13.Text = "Email"
         ' 
@@ -175,18 +183,20 @@ Partial Class SignUp
         Label10.AutoSize = True
         Label10.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label10.ForeColor = Color.Red
-        Label10.Location = New Point(153, 198)
+        Label10.Location = New Point(219, 330)
+        Label10.Margin = New Padding(4, 0, 4, 0)
         Label10.Name = "Label10"
-        Label10.Size = New Size(12, 15)
+        Label10.Size = New Size(20, 25)
         Label10.TabIndex = 31
         Label10.Text = "*"
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(5, 52)
+        Label3.Location = New Point(7, 87)
+        Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(54, 15)
+        Label3.Size = New Size(82, 25)
         Label3.TabIndex = 17
         Label3.Text = "Surname"
         ' 
@@ -195,9 +205,10 @@ Partial Class SignUp
         Label9.AutoSize = True
         Label9.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.Red
-        Label9.Location = New Point(153, 148)
+        Label9.Location = New Point(219, 247)
+        Label9.Margin = New Padding(4, 0, 4, 0)
         Label9.Name = "Label9"
-        Label9.Size = New Size(12, 15)
+        Label9.Size = New Size(20, 25)
         Label9.TabIndex = 30
         Label9.Text = "*"
         ' 
@@ -206,18 +217,20 @@ Partial Class SignUp
         Label8.AutoSize = True
         Label8.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.Red
-        Label8.Location = New Point(153, 69)
+        Label8.Location = New Point(219, 115)
+        Label8.Margin = New Padding(4, 0, 4, 0)
         Label8.Name = "Label8"
-        Label8.Size = New Size(12, 15)
+        Label8.Size = New Size(20, 25)
         Label8.TabIndex = 29
         Label8.Text = "*"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(5, 12)
+        Label2.Location = New Point(7, 20)
+        Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(64, 15)
+        Label2.Size = New Size(97, 25)
         Label2.TabIndex = 16
         Label2.Text = "First Name"
         ' 
@@ -226,59 +239,62 @@ Partial Class SignUp
         Label7.AutoSize = True
         Label7.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.Red
-        Label7.Location = New Point(153, 29)
+        Label7.Location = New Point(219, 48)
+        Label7.Margin = New Padding(4, 0, 4, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(12, 15)
+        Label7.Size = New Size(20, 25)
         Label7.TabIndex = 22
         Label7.Text = "*"
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Location = New Point(5, 172)
+        Label5.Location = New Point(7, 287)
+        Label5.Margin = New Padding(4, 0, 4, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(104, 15)
+        Label5.Size = New Size(156, 25)
         Label5.TabIndex = 20
         Label5.Text = "Confirm Password"
         ' 
         ' txtConfirmPasswors
         ' 
-        txtConfirmPasswors.Location = New Point(5, 189)
-        txtConfirmPasswors.Margin = New Padding(3, 2, 3, 2)
+        txtConfirmPasswors.Location = New Point(7, 315)
+        txtConfirmPasswors.Margin = New Padding(4, 3, 4, 3)
         txtConfirmPasswors.Name = "txtConfirmPasswors"
-        txtConfirmPasswors.Size = New Size(148, 23)
+        txtConfirmPasswors.Size = New Size(210, 31)
         txtConfirmPasswors.TabIndex = 28
         ' 
         ' txtPassword
         ' 
-        txtPassword.Location = New Point(5, 149)
-        txtPassword.Margin = New Padding(3, 2, 3, 2)
+        txtPassword.Location = New Point(7, 248)
+        txtPassword.Margin = New Padding(4, 3, 4, 3)
         txtPassword.Name = "txtPassword"
-        txtPassword.Size = New Size(148, 23)
+        txtPassword.Size = New Size(210, 31)
         txtPassword.TabIndex = 27
         ' 
         ' txtSurname
         ' 
-        txtSurname.Location = New Point(5, 69)
-        txtSurname.Margin = New Padding(3, 2, 3, 2)
+        txtSurname.Location = New Point(7, 115)
+        txtSurname.Margin = New Padding(4, 3, 4, 3)
         txtSurname.Name = "txtSurname"
-        txtSurname.Size = New Size(148, 23)
+        txtSurname.Size = New Size(210, 31)
         txtSurname.TabIndex = 24
         ' 
         ' txtEmail
         ' 
-        txtEmail.Location = New Point(5, 110)
-        txtEmail.Margin = New Padding(3, 2, 3, 2)
+        txtEmail.Location = New Point(7, 183)
+        txtEmail.Margin = New Padding(4, 3, 4, 3)
         txtEmail.Name = "txtEmail"
-        txtEmail.Size = New Size(148, 23)
+        txtEmail.Size = New Size(210, 31)
         txtEmail.TabIndex = 26
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(5, 132)
+        Label4.Location = New Point(7, 220)
+        Label4.Margin = New Padding(4, 0, 4, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(114, 15)
+        Label4.Size = New Size(172, 25)
         Label4.TabIndex = 19
         Label4.Text = "Enter New Password"
         ' 
@@ -288,10 +304,10 @@ Partial Class SignUp
         btnSignUp.FlatStyle = FlatStyle.Popup
         btnSignUp.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSignUp.ForeColor = SystemColors.Control
-        btnSignUp.Location = New Point(552, 340)
-        btnSignUp.Margin = New Padding(3, 2, 3, 2)
+        btnSignUp.Location = New Point(789, 540)
+        btnSignUp.Margin = New Padding(4, 3, 4, 3)
         btnSignUp.Name = "btnSignUp"
-        btnSignUp.Size = New Size(154, 33)
+        btnSignUp.Size = New Size(220, 55)
         btnSignUp.TabIndex = 8
         btnSignUp.Text = "Sign Up"
         btnSignUp.UseVisualStyleBackColor = False
@@ -299,10 +315,9 @@ Partial Class SignUp
         ' PictureBox3
         ' 
         PictureBox3.Image = My.Resources.Resources._exit
-        PictureBox3.Location = New Point(842, 1)
-        PictureBox3.Margin = New Padding(2)
+        PictureBox3.Location = New Point(1203, 2)
         PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(26, 21)
+        PictureBox3.Size = New Size(37, 35)
         PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox3.TabIndex = 17
         PictureBox3.TabStop = False
@@ -311,9 +326,10 @@ Partial Class SignUp
         ' 
         LogInLink.AutoSize = True
         LogInLink.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        LogInLink.Location = New Point(690, 403)
+        LogInLink.Location = New Point(976, 642)
+        LogInLink.Margin = New Padding(4, 0, 4, 0)
         LogInLink.Name = "LogInLink"
-        LogInLink.Size = New Size(41, 15)
+        LogInLink.Size = New Size(65, 25)
         LogInLink.TabIndex = 21
         LogInLink.TabStop = True
         LogInLink.Text = "Log In"
@@ -321,28 +337,37 @@ Partial Class SignUp
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(522, 403)
+        Label1.Location = New Point(746, 645)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(146, 15)
+        Label1.Size = New Size(222, 25)
         Label1.TabIndex = 20
         Label1.Text = " Do you have an account ?"
         ' 
         ' chkAgreementWithPolicies
         ' 
         chkAgreementWithPolicies.AutoSize = True
-        chkAgreementWithPolicies.Location = New Point(501, 382)
-        chkAgreementWithPolicies.Margin = New Padding(3, 2, 3, 2)
+        chkAgreementWithPolicies.Location = New Point(716, 610)
+        chkAgreementWithPolicies.Margin = New Padding(4, 3, 4, 3)
         chkAgreementWithPolicies.Name = "chkAgreementWithPolicies"
-        chkAgreementWithPolicies.Size = New Size(230, 19)
+        chkAgreementWithPolicies.Size = New Size(346, 29)
         chkAgreementWithPolicies.TabIndex = 19
         chkAgreementWithPolicies.Text = "I agree wth the terms Of Movie Rentals"
         chkAgreementWithPolicies.UseVisualStyleBackColor = True
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Location = New Point(120, 49)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(150, 75)
+        PictureBox1.TabIndex = 23
+        PictureBox1.TabStop = False
+        ' 
         ' SignUp
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(868, 432)
+        ClientSize = New Size(1240, 720)
         Controls.Add(LogInLink)
         Controls.Add(Label1)
         Controls.Add(chkAgreementWithPolicies)
@@ -352,7 +377,7 @@ Partial Class SignUp
         Controls.Add(btnSignUp)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
-        Margin = New Padding(3, 2, 3, 2)
+        Margin = New Padding(4, 3, 4, 3)
         Name = "SignUp"
         StartPosition = FormStartPosition.CenterScreen
         Text = "SignUp"
@@ -361,6 +386,7 @@ Partial Class SignUp
         grpUserCredentials.ResumeLayout(False)
         grpUserCredentials.PerformLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -391,4 +417,5 @@ Partial Class SignUp
     Friend WithEvents Label1 As Label
     Friend WithEvents chkAgreementWithPolicies As CheckBox
     Friend WithEvents btnBack As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
