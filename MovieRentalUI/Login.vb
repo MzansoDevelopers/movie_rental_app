@@ -10,6 +10,8 @@
         Dim signup As New SignUp
         signup.Show()
 
+        Me.Hide() 'Hide the current form.
+
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click

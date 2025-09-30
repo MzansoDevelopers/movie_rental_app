@@ -4,6 +4,9 @@
         Dim login As New Login
         login.Show()
 
+        Me.Hide() 'Hide the current form
+
+
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
