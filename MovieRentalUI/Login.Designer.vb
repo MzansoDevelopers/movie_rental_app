@@ -26,12 +26,11 @@ Partial Class Login
         Panel1 = New Panel()
         Label8 = New Label()
         Label1 = New Label()
-        PictureBox1 = New PictureBox()
-        txtEmailAddress = New TextBox()
+        rdoCustomer = New RadioButton()
+        rdoStuff = New RadioButton()
+        txtEmail = New TextBox()
         txtPassword = New TextBox()
         Label2 = New Label()
-        LinkLabel1 = New LinkLabel()
-        LinkLabel2 = New LinkLabel()
         SignUpLink = New LinkLabel()
         Label3 = New Label()
         btnLogin = New Button()
@@ -40,11 +39,14 @@ Partial Class Login
         Label6 = New Label()
         Label7 = New Label()
         PictureBox3 = New PictureBox()
-        PictureBox2 = New PictureBox()
+        pbShowPassword = New PictureBox()
+        Label10 = New Label()
+        pbHidePassword = New PictureBox()
+        lblEmailStatus = New Label()
         Panel1.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(pbShowPassword, ComponentModel.ISupportInitialize).BeginInit()
+        CType(pbHidePassword, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -52,10 +54,10 @@ Partial Class Login
         Panel1.BackColor = Color.Navy
         Panel1.Controls.Add(Label8)
         Panel1.Controls.Add(Label1)
-        Panel1.Location = New Point(-2, -3)
+        Panel1.Location = New Point(-2, 0)
         Panel1.Margin = New Padding(2, 3, 2, 3)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(350, 513)
+        Panel1.Size = New Size(504, 576)
         Panel1.TabIndex = 0
         ' 
         ' Label8
@@ -63,7 +65,7 @@ Partial Class Login
         Label8.AutoSize = True
         Label8.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.White
-        Label8.Location = New Point(85, 99)
+        Label8.Location = New Point(170, 181)
         Label8.Margin = New Padding(2, 0, 2, 0)
         Label8.Name = "Label8"
         Label8.Size = New Size(175, 32)
@@ -75,37 +77,52 @@ Partial Class Login
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(57, 47)
+        Label1.Location = New Point(134, 134)
         Label1.Margin = New Padding(2, 0, 2, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(243, 54)
         Label1.TabIndex = 0
         Label1.Text = "CyberGhost"
         ' 
-        ' PictureBox1
+        ' rdoCustomer
         ' 
-        PictureBox1.Image = My.Resources.Resources.WhatsApp_Image_2025_09_25_at_18_06_43_26a4d946
-        PictureBox1.Location = New Point(433, 131)
-        PictureBox1.Margin = New Padding(2, 3, 2, 3)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(105, 101)
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox1.TabIndex = 1
-        PictureBox1.TabStop = False
+        rdoCustomer.AutoSize = True
+        rdoCustomer.ForeColor = Color.Black
+        rdoCustomer.Location = New Point(728, 181)
+        rdoCustomer.Name = "rdoCustomer"
+        rdoCustomer.Size = New Size(93, 24)
+        rdoCustomer.TabIndex = 5
+        rdoCustomer.TabStop = True
+        rdoCustomer.Text = "Customer"
+        rdoCustomer.UseVisualStyleBackColor = True
         ' 
-        ' txtEmailAddress
+        ' rdoStuff
         ' 
-        txtEmailAddress.Location = New Point(413, 281)
-        txtEmailAddress.Margin = New Padding(2, 3, 2, 3)
-        txtEmailAddress.Name = "txtEmailAddress"
-        txtEmailAddress.Size = New Size(253, 27)
-        txtEmailAddress.TabIndex = 3
+        rdoStuff.AutoSize = True
+        rdoStuff.ForeColor = Color.Black
+        rdoStuff.Location = New Point(826, 181)
+        rdoStuff.Name = "rdoStuff"
+        rdoStuff.Size = New Size(61, 24)
+        rdoStuff.TabIndex = 4
+        rdoStuff.TabStop = True
+        rdoStuff.Text = "Staff"
+        rdoStuff.UseVisualStyleBackColor = True
+        ' 
+        ' txtEmail
+        ' 
+        txtEmail.Location = New Point(627, 249)
+        txtEmail.Margin = New Padding(2, 3, 2, 3)
+        txtEmail.Name = "txtEmail"
+        txtEmail.PlaceholderText = "Enter email address"
+        txtEmail.Size = New Size(253, 27)
+        txtEmail.TabIndex = 3
         ' 
         ' txtPassword
         ' 
-        txtPassword.Location = New Point(413, 341)
+        txtPassword.Location = New Point(627, 309)
         txtPassword.Margin = New Padding(2, 3, 2, 3)
         txtPassword.Name = "txtPassword"
+        txtPassword.PlaceholderText = "Enter Password"
         txtPassword.Size = New Size(253, 27)
         txtPassword.TabIndex = 4
         ' 
@@ -113,47 +130,21 @@ Partial Class Login
         ' 
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Segoe UI", 28F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.Navy
-        Label2.Location = New Point(445, 31)
+        Label2.Location = New Point(596, 77)
         Label2.Margin = New Padding(2, 0, 2, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(221, 41)
+        Label2.Size = New Size(348, 62)
         Label2.TabIndex = 5
         Label2.Text = "Welcome Back"
-        ' 
-        ' LinkLabel1
-        ' 
-        LinkLabel1.AutoSize = True
-        LinkLabel1.Font = New Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        LinkLabel1.LinkColor = Color.Black
-        LinkLabel1.Location = New Point(464, 105)
-        LinkLabel1.Margin = New Padding(2, 0, 2, 0)
-        LinkLabel1.Name = "LinkLabel1"
-        LinkLabel1.Size = New Size(52, 25)
-        LinkLabel1.TabIndex = 6
-        LinkLabel1.TabStop = True
-        LinkLabel1.Text = "User"
-        ' 
-        ' LinkLabel2
-        ' 
-        LinkLabel2.AutoSize = True
-        LinkLabel2.Font = New Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        LinkLabel2.LinkColor = Color.Black
-        LinkLabel2.Location = New Point(565, 105)
-        LinkLabel2.Margin = New Padding(2, 0, 2, 0)
-        LinkLabel2.Name = "LinkLabel2"
-        LinkLabel2.Size = New Size(71, 25)
-        LinkLabel2.TabIndex = 7
-        LinkLabel2.TabStop = True
-        LinkLabel2.Text = "Admin"
         ' 
         ' SignUpLink
         ' 
         SignUpLink.AutoSize = True
         SignUpLink.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        SignUpLink.LinkColor = Color.FromArgb(CByte(192), CByte(0), CByte(192))
-        SignUpLink.Location = New Point(608, 445)
+        SignUpLink.LinkColor = Color.Blue
+        SignUpLink.Location = New Point(822, 413)
         SignUpLink.Margin = New Padding(2, 0, 2, 0)
         SignUpLink.Name = "SignUpLink"
         SignUpLink.Size = New Size(63, 20)
@@ -165,7 +156,7 @@ Partial Class Login
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(411, 445)
+        Label3.Location = New Point(626, 413)
         Label3.Margin = New Padding(2, 0, 2, 0)
         Label3.Name = "Label3"
         Label3.Size = New Size(199, 23)
@@ -178,7 +169,7 @@ Partial Class Login
         btnLogin.FlatStyle = FlatStyle.Flat
         btnLogin.Font = New Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnLogin.ForeColor = Color.White
-        btnLogin.Location = New Point(411, 384)
+        btnLogin.Location = New Point(626, 352)
         btnLogin.Margin = New Padding(2, 3, 2, 3)
         btnLogin.Name = "btnLogin"
         btnLogin.Size = New Size(255, 53)
@@ -190,7 +181,7 @@ Partial Class Login
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(411, 253)
+        Label4.Location = New Point(626, 221)
         Label4.Margin = New Padding(2, 0, 2, 0)
         Label4.Name = "Label4"
         Label4.Size = New Size(114, 23)
@@ -201,7 +192,7 @@ Partial Class Login
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(414, 313)
+        Label5.Location = New Point(630, 281)
         Label5.Margin = New Padding(2, 0, 2, 0)
         Label5.Name = "Label5"
         Label5.Size = New Size(80, 23)
@@ -213,7 +204,7 @@ Partial Class Login
         Label6.AutoSize = True
         Label6.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.Red
-        Label6.Location = New Point(513, 249)
+        Label6.Location = New Point(728, 217)
         Label6.Margin = New Padding(2, 0, 2, 0)
         Label6.Name = "Label6"
         Label6.Size = New Size(21, 28)
@@ -225,7 +216,7 @@ Partial Class Login
         Label7.AutoSize = True
         Label7.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.Red
-        Label7.Location = New Point(489, 309)
+        Label7.Location = New Point(704, 277)
         Label7.Margin = New Padding(2, 0, 2, 0)
         Label7.Name = "Label7"
         Label7.Size = New Size(21, 28)
@@ -235,31 +226,65 @@ Partial Class Login
         ' PictureBox3
         ' 
         PictureBox3.Image = My.Resources.Resources._exit
-        PictureBox3.Location = New Point(704, 9)
+        PictureBox3.Location = New Point(960, 3)
         PictureBox3.Margin = New Padding(2, 3, 2, 3)
         PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(30, 28)
+        PictureBox3.Size = New Size(27, 27)
         PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox3.TabIndex = 15
         PictureBox3.TabStop = False
         ' 
-        ' PictureBox2
+        ' pbShowPassword
         ' 
-        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(543, 131)
-        PictureBox2.Margin = New Padding(2, 3, 2, 3)
-        PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(105, 101)
-        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox2.TabIndex = 16
-        PictureBox2.TabStop = False
+        pbShowPassword.Image = CType(resources.GetObject("pbShowPassword.Image"), Image)
+        pbShowPassword.Location = New Point(856, 314)
+        pbShowPassword.Margin = New Padding(2)
+        pbShowPassword.Name = "pbShowPassword"
+        pbShowPassword.Size = New Size(15, 17)
+        pbShowPassword.SizeMode = PictureBoxSizeMode.StretchImage
+        pbShowPassword.TabIndex = 16
+        pbShowPassword.TabStop = False
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Font = New Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label10.Location = New Point(626, 181)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(92, 23)
+        Label10.TabIndex = 18
+        Label10.Text = "Login in as"
+        ' 
+        ' pbHidePassword
+        ' 
+        pbHidePassword.Image = My.Resources.Resources.WhatsApp_Image_2025_10_02_at_12_281
+        pbHidePassword.Location = New Point(856, 314)
+        pbHidePassword.Margin = New Padding(2)
+        pbHidePassword.Name = "pbHidePassword"
+        pbHidePassword.Size = New Size(15, 17)
+        pbHidePassword.SizeMode = PictureBoxSizeMode.StretchImage
+        pbHidePassword.TabIndex = 19
+        pbHidePassword.TabStop = False
+        ' 
+        ' lblEmailStatus
+        ' 
+        lblEmailStatus.AutoSize = True
+        lblEmailStatus.Location = New Point(885, 256)
+        lblEmailStatus.Name = "lblEmailStatus"
+        lblEmailStatus.Size = New Size(0, 20)
+        lblEmailStatus.TabIndex = 20
         ' 
         ' Login
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(743, 508)
-        Controls.Add(PictureBox2)
+        ClientSize = New Size(992, 576)
+        Controls.Add(lblEmailStatus)
+        Controls.Add(pbHidePassword)
+        Controls.Add(rdoStuff)
+        Controls.Add(rdoCustomer)
+        Controls.Add(Label10)
+        Controls.Add(pbShowPassword)
         Controls.Add(PictureBox3)
         Controls.Add(Label6)
         Controls.Add(Label5)
@@ -267,12 +292,9 @@ Partial Class Login
         Controls.Add(btnLogin)
         Controls.Add(Label3)
         Controls.Add(SignUpLink)
-        Controls.Add(LinkLabel2)
-        Controls.Add(LinkLabel1)
         Controls.Add(Label2)
         Controls.Add(txtPassword)
-        Controls.Add(txtEmailAddress)
-        Controls.Add(PictureBox1)
+        Controls.Add(txtEmail)
         Controls.Add(Panel1)
         Controls.Add(Label7)
         FormBorderStyle = FormBorderStyle.None
@@ -282,21 +304,18 @@ Partial Class Login
         Text = "Login"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(pbShowPassword, ComponentModel.ISupportInitialize).EndInit()
+        CType(pbHidePassword, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents txtEmailAddress As TextBox
+    Friend WithEvents txtEmail As TextBox
     Friend WithEvents txtPassword As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents LinkLabel1 As LinkLabel
-    Friend WithEvents LinkLabel2 As LinkLabel
     Friend WithEvents SignUpLink As LinkLabel
     Friend WithEvents Label3 As Label
     Friend WithEvents btnLogin As Button
@@ -306,5 +325,10 @@ Partial Class Login
     Friend WithEvents Label7 As Label
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents pbShowPassword As PictureBox
+    Friend WithEvents rdoCustomer As RadioButton
+    Friend WithEvents rdoStuff As RadioButton
+    Friend WithEvents Label10 As Label
+    Friend WithEvents pbHidePassword As PictureBox
+    Friend WithEvents lblEmailStatus As Label
 End Class
