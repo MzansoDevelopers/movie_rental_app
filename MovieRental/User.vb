@@ -1,4 +1,5 @@
-﻿Public Class User
+﻿
+Public Class User
 
     'Knox add variables
     'Nkosinathi add  con
@@ -53,4 +54,7 @@
                 End If
             End Sub
         End Class
+    End Class
+End Class
+
 
