@@ -16,7 +16,7 @@
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         'This is to make sure the user enters both username and password
-        Dim emailEmpty As Boolean = String.IsNullOrWhiteSpace(txtEmailAddress.Text)
+        Dim emailEmpty As Boolean = String.IsNullOrWhiteSpace(txtEmail.Text)
         Dim passwordEmpty As Boolean = String.IsNullOrWhiteSpace(txtPassword.Text)
 
         If emailEmpty AndAlso passwordEmpty Then
@@ -53,5 +53,28 @@
         txtPassword.UseSystemPasswordChar = True
     End Sub
 
+    ' This function validates the email format and provides visual feedback
+    Private Sub ValidateEmail()
+        Dim emailText As String = txtEmail.Text
 
+        If emailText.Contains("@") AndAlso emailText.Contains(".") Then
+            txtEmail.BackColor = Color.LightGreen
+            lblEmailStatus.Text = "Valid email ✅"
+            btnLogin.Enabled = True
+        Else
+            txtEmail.BackColor = Color.LightCoral
+            lblEmailStatus.Text = "Invalid email ❌"
+            btnLogin.Enabled = False
+        End If
+
+        ' Reset the color when the field is empty
+        If emailText = "" Then txtEmail.BackColor = SystemColors.Window
+
+    End Sub
+
+    ' Event handler for text changed event to validate email in real-time
+    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
+        ValidateEmail()
+
+    End Sub
 End Class

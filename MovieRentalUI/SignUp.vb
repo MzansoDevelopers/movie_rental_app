@@ -85,4 +85,97 @@
         txtPassword.UseSystemPasswordChar = True
         txtConfirmPassword.UseSystemPasswordChar = True
     End Sub
+
+    ' This function checks if Name and surname are long enough to be valid and provides visual feedback
+    Private Sub ValidateNameFields()
+        Dim firstNameValid As Boolean = txtFirstname.Text.Length > 2
+        Dim surnameValid As Boolean = txtSurname.Text.Length > 2
+
+        ' Visual feedback
+        txtFirstname.BackColor = If(firstNameValid, Color.LightGreen, Color.LightCoral)
+        txtSurname.BackColor = If(surnameValid, Color.LightGreen, Color.LightCoral)
+
+
+        ' Enable SignUp only if all validations pass
+        btnSignUp.Enabled = firstNameValid AndAlso surnameValid
+
+        'Name status lable update
+        lblNameStatus.Text = If(firstNameValid AndAlso surnameValid, "Name looks good ✅", "Name too short ❌")
+
+        ' Reset the color when fields are empty
+        If txtFirstname.Text = "" Then txtFirstname.BackColor = SystemColors.Window
+    End Sub
+
+    'Event handler for text changed event to validate Surname in real-time
+    Private Sub txtSurname_TextChanged(sender As Object, e As EventArgs) Handles txtSurname.TextChanged
+        ValidateNameFields()
+        UpdateSignUpButtonState()
+    End Sub
+
+    ' This function validates the email format and provides visual feedback
+    Private Sub ValidateEmail()
+        Dim emailText As String = txtEmail.Text
+
+        If emailText.Contains("@") AndAlso emailText.Contains(".") Then
+            txtEmail.BackColor = Color.LightGreen
+            lblEmailStatus.Text = "Valid email ✅"
+            btnSignUp.Enabled = True
+        Else
+            txtEmail.BackColor = Color.LightCoral
+            lblEmailStatus.Text = "Invalid email ❌"
+            btnSignUp.Enabled = False
+        End If
+
+        ' Reset the color when the field is empty
+        If emailText = "" Then txtEmail.BackColor = SystemColors.Window
+
+    End Sub
+
+    ' Event handler for text changed event to validate email in real-time
+    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
+        ValidateEmail()
+        UpdateSignUpButtonState()
+    End Sub
+
+    ' This function validates if the passwords match and provides visual feedback
+    Private Sub ValidatePasswords()
+        Dim enteredPassword As String = txtPassword.Text
+        Dim confirmedPassword As String = txtConfirmPassword.Text
+
+        'This if statement changes the background color of the confirm password field based on whether the passwords match
+        If enteredPassword = confirmedPassword Then
+            txtConfirmPassword.BackColor = Color.LightGreen
+        Else
+            txtConfirmPassword.BackColor = Color.FromArgb(255, 128, 128)
+        End If
+
+        'This if statement reset the color when both fields are empty,
+        If enteredPassword = "" And confirmedPassword = "" Then
+            txtConfirmPassword.BackColor = SystemColors.Window
+        End If
+
+        ' This is for the label to show if passwords match or not
+        lblPasswordStatus.Text = If(txtPassword.Text = txtConfirmPassword.Text, "Passwords match ✅", "Passwords do not match ❌")
+
+
+    End Sub
+
+    ' Event handlers() For text changed events To validate passwords In real-time
+    Private Sub txtConfirmPasswors_TextChanged(sender As Object, e As EventArgs) Handles txtConfirmPassword.TextChanged
+        ValidatePasswords()
+        UpdateSignUpButtonState()
+
+    End Sub
+
+    'disable the signup button for every filed that's not met
+    Private Sub UpdateSignUpButtonState()
+        Dim firstNameValid As Boolean = txtFirstname.Text.Length > 2
+        Dim surnameValid As Boolean = txtSurname.Text.Length > 2
+        Dim emailValid As Boolean = txtEmail.Text.Contains("@") AndAlso txtEmail.Text.Contains(".")
+        Dim passwordsMatch As Boolean = txtPassword.Text = txtConfirmPassword.Text
+
+        btnSignUp.Enabled = firstNameValid AndAlso surnameValid AndAlso emailValid AndAlso passwordsMatch
+    End Sub
 End Class
+
+
