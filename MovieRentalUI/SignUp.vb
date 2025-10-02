@@ -32,7 +32,7 @@
         Dim surnameEmpty As Boolean = String.IsNullOrWhiteSpace(txtSurname.Text)
         Dim emailEmpty As Boolean = String.IsNullOrWhiteSpace(txtEmail.Text)
         Dim passwordEmpty As Boolean = String.IsNullOrWhiteSpace(txtPassword.Text)
-        Dim confirmEmpty As Boolean = String.IsNullOrWhiteSpace(txtConfirmPasswors.Text)
+        Dim confirmEmpty As Boolean = String.IsNullOrWhiteSpace(txtConfirmPassword.Text)
 
         ' Check if any field is empty
         If firstNameEmpty OrElse surnameEmpty OrElse emailEmpty OrElse passwordEmpty OrElse confirmEmpty Then
@@ -49,5 +49,40 @@
         loginForm.Show()
         Me.Close()
 
+    End Sub
+    Private Sub pbHidePassword_Click(sender As Object, e As EventArgs) Handles pbHidePassword.Click
+        pbHidePassword.Hide()
+        pbShowPassword.Show()
+        txtPassword.UseSystemPasswordChar = False
+    End Sub
+
+
+    Private Sub pbShowPassword_Click(sender As Object, e As EventArgs) Handles pbShowPassword.Click
+
+        pbShowPassword.Hide()
+        pbHidePassword.Show()
+        txtPassword.UseSystemPasswordChar = True
+
+    End Sub
+
+
+    Private Sub pbHideConfirmPassword_Click(sender As Object, e As EventArgs) Handles pbHideConfirmPassword.Click
+        pbHideConfirmPassword.Hide()
+        pbShowConfirmPassword.Show()
+        txtConfirmPassword.UseSystemPasswordChar = False
+    End Sub
+
+
+    Private Sub pbShowConfirmPassword_Click(sender As Object, e As EventArgs) Handles pbShowConfirmPassword.Click
+
+        pbHideConfirmPassword.Hide()
+        pbHideConfirmPassword.Show()
+        txtConfirmPassword.UseSystemPasswordChar = True
+
+
+    End Sub
+    Private Sub SignUp_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtPassword.UseSystemPasswordChar = True
+        txtConfirmPassword.UseSystemPasswordChar = True
     End Sub
 End Class

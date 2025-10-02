@@ -33,20 +33,23 @@
 
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
-
+    Private Sub pbHidePassword_Click(sender As Object, e As EventArgs) Handles pbHidePassword.Click
+        pbHidePassword.Hide()
+        pbShowPassword.Show()
+        txtPassword.UseSystemPasswordChar = False
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        txtPassword.UseSystemPasswordChar = False
+
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles pbShowPassword.Click
+        pbShowPassword.Hide()
+        pbHidePassword.Show()
+        txtPassword.UseSystemPasswordChar = True
+
 
     End Sub
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtPassword.UseSystemPasswordChar = True
-    End Sub
-
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         txtPassword.UseSystemPasswordChar = True
     End Sub
 
