@@ -12,6 +12,7 @@ Public Class Movie
         _description = description
         _movieType = movieType
         _available = available
+        
     End Sub
 
     ' Properties
